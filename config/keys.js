@@ -1,4 +1,5 @@
-module.exports = {
-  mongoURI: 'mongodb://mongoAraf:coinJar1!@ds249942.mlab.com:49942/blog_dev?authMechanism=SCRAM-SHA-1',
-  secretOrKey: 'secret'
-};
+if( process.env.NODE_ENV === "production"){
+  module.exports = require('./keys_prod');
+}else{
+  module.exports = require('./keys_dev');
+}

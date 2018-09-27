@@ -16,10 +16,13 @@ export const addPost = postData => dispatch => {
   axios
     .post('/api/posts', postData)
     .then(res =>
+      {
+        console.log(res.data);
       dispatch({
         type: ADD_POST,
         payload: res.data
       })
+    }
     )
     .catch(err =>
       dispatch({

@@ -9,11 +9,18 @@ class PostForm extends Component {
     super(props);
     this.state = {
       text: '',
+      signal: '',
+      buyorsell: 'Select Buy or Sell',
       errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onDropdownSelected = this.onDropdownSelected.bind(this);
+  }
+
+  componentWillMount(){
+    console.log("component mounted");
   }
 
   componentWillReceiveProps(newProps) {
@@ -24,17 +31,22 @@ class PostForm extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
+    console.log("suimtted");
     const { user } = this.props.auth;
-
     const newPost = {
       text: this.state.text,
+      buyorsell: this.state.buyorsell,
+      signal: this.state.signal,
       name: user.name,
       avatar: user.avatar
     };
 
     this.props.addPost(newPost);
     this.setState({ text: '' });
+  }
+
+  onDropdownSelected(e){
+    this.setState({ buyorsell: e.target.value});
   }
 
   onChange(e) {
@@ -52,12 +64,26 @@ class PostForm extends Component {
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <TextAreaFieldGroup
-                  placeholder="Create a post"
+                  placeholder="Description of Signal"
                   name="text"
                   value={this.state.text}
                   onChange={this.onChange}
                   error={errors.text}
                 />
+                <TextAreaFieldGroup
+                  placeholder="Signal"
+                  name="signal"
+                  value={this.state.signal}
+                  onChange={this.onChange}
+                  error={errors.text}
+                />
+                <div class="custom-select">
+                  <select onChange={this.onDropdownSelected} value={this.state.buyorsell} >
+                    <option value="0">Select Buy or Sell:</option>
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>
+                  </select>
+                </div>
               </div>
               <button type="submit" className="btn btn-dark">
                 Submit

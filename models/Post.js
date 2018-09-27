@@ -11,6 +11,14 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
+  signal: {
+    type: String,
+    required: true
+  },
+  direction: {
+    type: String,
+    required: true
+  },
   name: {
     type: String
   },
