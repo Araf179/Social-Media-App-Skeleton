@@ -9,24 +9,18 @@ class PostForm extends Component {
     super(props);
     this.state = {
       text: '',
-<<<<<<< HEAD
       signal: '',
       buyorsell: 'Select Buy or Sell',
-=======
->>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
       errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-<<<<<<< HEAD
     this.onDropdownSelected = this.onDropdownSelected.bind(this);
   }
 
   componentWillMount(){
     console.log("component mounted");
-=======
->>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
   }
 
   componentWillReceiveProps(newProps) {
