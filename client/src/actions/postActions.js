@@ -16,13 +16,19 @@ export const addPost = postData => dispatch => {
   axios
     .post('/api/posts', postData)
     .then(res =>
+<<<<<<< HEAD
       {
         console.log(res.data);
+=======
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
       dispatch({
         type: ADD_POST,
         payload: res.data
       })
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
     )
     .catch(err =>
       dispatch({

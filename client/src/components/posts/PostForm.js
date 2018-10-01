@@ -9,18 +9,24 @@ class PostForm extends Component {
     super(props);
     this.state = {
       text: '',
+<<<<<<< HEAD
       signal: '',
       buyorsell: 'Select Buy or Sell',
+=======
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
       errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+<<<<<<< HEAD
     this.onDropdownSelected = this.onDropdownSelected.bind(this);
   }
 
   componentWillMount(){
     console.log("component mounted");
+=======
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
   }
 
   componentWillReceiveProps(newProps) {
@@ -31,12 +37,20 @@ class PostForm extends Component {
 
   onSubmit(e) {
     e.preventDefault();
+<<<<<<< HEAD
     console.log("suimtted");
     const { user } = this.props.auth;
     const newPost = {
       text: this.state.text,
       buyorsell: this.state.buyorsell,
       signal: this.state.signal,
+=======
+
+    const { user } = this.props.auth;
+
+    const newPost = {
+      text: this.state.text,
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
       name: user.name,
       avatar: user.avatar
     };
@@ -45,10 +59,13 @@ class PostForm extends Component {
     this.setState({ text: '' });
   }
 
+<<<<<<< HEAD
   onDropdownSelected(e){
     this.setState({ buyorsell: e.target.value});
   }
 
+=======
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -64,12 +81,17 @@ class PostForm extends Component {
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <TextAreaFieldGroup
+<<<<<<< HEAD
                   placeholder="Description of Signal"
+=======
+                  placeholder="Create a post"
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
                   name="text"
                   value={this.state.text}
                   onChange={this.onChange}
                   error={errors.text}
                 />
+<<<<<<< HEAD
                 <TextAreaFieldGroup
                   placeholder="Signal"
                   name="signal"
@@ -84,6 +106,8 @@ class PostForm extends Component {
                     <option value="sell">Sell</option>
                   </select>
                 </div>
+=======
+>>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
               </div>
               <button type="submit" className="btn btn-dark">
                 Submit
