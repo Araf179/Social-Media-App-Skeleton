@@ -11,7 +11,6 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
-<<<<<<< HEAD
   signal: {
     type: String,
     required: true
@@ -20,8 +19,6 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
-=======
->>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
   name: {
     type: String
   },

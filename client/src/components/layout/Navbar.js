@@ -19,11 +19,7 @@ class Navbar extends Component {
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link className="nav-link" to="/feed">
-<<<<<<< HEAD
             Post Signals
-=======
-            Post Feed
->>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
           </Link>
         </li>
         <li className="nav-item">
@@ -69,11 +65,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
-<<<<<<< HEAD
             Investor Connector
-=======
-            DevConnector
->>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
           </Link>
           <button
             className="navbar-toggler"
@@ -89,11 +81,7 @@ class Navbar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/profiles">
                   {' '}
-<<<<<<< HEAD
                   Investors
-=======
-                  Developers
->>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
                 </Link>
               </li>
             </ul>

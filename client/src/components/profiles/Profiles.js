@@ -31,15 +31,9 @@ class Profiles extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-<<<<<<< HEAD
               <h1 className="display-4 text-center">Investor Profiles</h1>
               <p className="lead text-center">
                 Browse and connect with Investors
-=======
-              <h1 className="display-4 text-center">Developer Profiles</h1>
-              <p className="lead text-center">
-                Browse and connect with developers
->>>>>>> 75d05f4e83af2c987ba171ff22beaa8440c4eeed
               </p>
               {profileItems}
             </div>
