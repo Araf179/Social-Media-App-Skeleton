@@ -81,7 +81,7 @@ class Navbar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/profiles">
                   {' '}
-                  Investors
+                  Top Investors
                 </Link>
               </li>
             </ul>
